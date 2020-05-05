@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Abel', sans-serif;
+    background-color: rgb(88, 103, 151);
+}
+
+header{
+    text-align: center;
+    padding: 2.1em 0em;
+    background-color: rgb(242, 247, 248);
+}
+
+.nombre-proyecto{
+    font-size: 2.4em;
+    padding: 5px;
+    text-shadow: 2px 2px 2px rgba(135, 178, 202, 0.767);
+    color: rgb(88, 103, 151);
+}
+
+.autor{
+    color: rgb(69, 66, 77);
+    font-size: 1.2em;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+#title{
+    margin: 1.4em 0px 0.6em 0px;
+    color: rgb(33, 71, 107);
+}
+
+.main{
+    margin: 4em;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 15px rgba(38, 33, 49, 0.945);
+}
+
+svg{
+    background-color: rgb(255, 255, 255);
+    margin: 0em 1.5em 1.5em 1.5em;
+}
+
+circle{
+    cursor: pointer;
+    stroke: rgb(243, 243, 255);
+    stroke-width: 3px;
+}
+
+.tooltip{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    background-color: rgb(255, 224, 137);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    transition: opacity 200ms ease-in;
+    font-size: 0.9em;
+    padding: 10px;
+}
+
+#legend{
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+
+.Type{
+    margin: 10px 0px;
+    display: flex;
+}
+
+.rectType{
+    width: 12px;
+    height: 12px;
+    margin-right: 15px;
+}
+
+.textType{
+    font-size: 13px;
+}
