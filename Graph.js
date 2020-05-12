@@ -9,20 +9,18 @@ d3.select('.main')
   .text("Dopaje en carreras profesionales de bicicletas")
   .attr('id', 'title')
 
-
 // tamaño del SVG
-let width = 900
-let height = 550
+let width = 900, height = 550
 
 // radio de los circulos
 const radio = 7
 
+// espacio entre los ejes y el contenido de círculos
 const padding = 60
 
 // Creación Legend
-
-let colorDopingArgs = 'rgb(88, 103, 151)'
-let colorNoDopingArgs = 'rgb(243, 184, 22)'
+let colorDopingArgs = 'rgb(88, 103, 151)', 
+    colorNoDopingArgs = 'rgb(243, 184, 22)'
 
 let legend = d3.select('.graph')
 .append('div')
@@ -30,23 +28,22 @@ let legend = d3.select('.graph')
 .style('margin-left', `${width-width/6}px`)
 .style('margin-top', `${height-height/1.5}px`)
 
-const legendLine1 = legend.append('div').attr('id', 'Type1').attr('class', 'Type')
-const legendLine2 = legend.append('div').attr('id', 'Type2').attr('class', 'Type')
+const legendLine1 = legend.append('div').attr('id', 'Type1').attr('class', 'Type'), 
+      legendLine2 = legend.append('div').attr('id', 'Type2').attr('class', 'Type')
 
-const rectType1 = legendLine1.append('div').attr('class', 'rectType').attr('id', 'rectType1').style('background-color', colorNoDopingArgs)
-const rectType2 = legendLine2.append('div').attr('class', 'rectType').attr('id', 'rectType2').style('background-color', colorDopingArgs)
+const rectType1 = legendLine1.append('div').attr('class', 'rectType').attr('id', 'rectType1').style('background-color', colorNoDopingArgs),
+      rectType2 = legendLine2.append('div').attr('class', 'rectType').attr('id', 'rectType2').style('background-color', colorDopingArgs)
 
-const textType1 = legendLine1.append('text').attr('class', 'textType').attr('id', 'textType1').text('Sin acusaciones de dopaje')
-const textType2 = legendLine2.append('text').attr('class', 'textType').attr('id', 'textType2').text('Ciclistas con acusaciones de dopaje')
-
+const textType1 = legendLine1.append('text').attr('class', 'textType').attr('id', 'textType1').text('Sin acusaciones de dopaje'),
+      textType2 = legendLine2.append('text').attr('class', 'textType').attr('id', 'textType2').text('Ciclistas con acusaciones de dopaje')
 
 // Creación Tooltip
 let tooltip = d3.select('.graph')
-.append('div')
-.attr('class', 'tooltip')
-.attr('id', 'tooltip')
-.style('visibility', 'hidden')
-.style('opacity', '0');
+                .append('div')
+                .attr('class', 'tooltip')
+                .attr('id', 'tooltip')
+                .style('visibility', 'hidden')
+                .style('opacity', '0');
 
 tooltip.append('text').attr('id', 'line1')
 tooltip.append('text').attr('id', 'line2')
@@ -58,10 +55,7 @@ const svg = d3.select('.graph')
               .attr('width', width + padding)
               .attr('height', height)
 
-
-
 // para los círculos de representación
-
 svg.append('text').text("Tiempo en Minutos")
 .attr("y", padding-15)
 .attr("x", -height/2)
